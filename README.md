@@ -1,6 +1,10 @@
 # Iniciando com AngularJS 1.5
 Esse projeto é baseado no curso de AngularJS da School of Net no qual se aprenderá todos os conceitos básicos do framework e as melhores práticas para desenvolvimento.
 
+##Tópicos abordados
+* Nosso ambiente
+* Controllers
+
 ## Requisitos fundamentais para rodar o projeto:  
 * [Node.js](https://nodejs.org)
 * [Gulp 4+](http://gulpjs.com/) (um gerencSiador de tarefas)

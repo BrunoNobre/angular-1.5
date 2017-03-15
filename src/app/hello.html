@@ -1,1 +1,13 @@
 <h1>{{ $ctrl.hello }}</h1>
+<hr>
+<!-- DATA-NG-MODEL: DATA é usado para validar o código na W3C mas pode se usar somente NG-MODEL -->
+<!-- $CTRL: Equivalente ao SCOPE do controller -->
+<label>Nome</label>
+<input type="text" data-ng-model="$ctrl.person.name"> 
+<label>Sobrenome</label>
+<input type="text" data-ng-model="$ctrl.person.lastname">
+<input type="submit" data-ng-click="$ctrl.alertMe()">
+
+<!-- Exibindo os dados -->
+{{ $ctrl.person.name }}
+{{ $ctrl.person.lastname }}
