@@ -6,7 +6,15 @@
 <input type="text" data-ng-model="$ctrl.person.name"> 
 <label>Sobrenome</label>
 <input type="text" data-ng-model="$ctrl.person.lastname">
-<input type="submit" data-ng-click="$ctrl.alertMe()">
+
+<input type="number" data-ng-model="num1"/>
+<input type="number" data-ng-model="num2">
+
+<input type="submit" data-ng-click="$ctrl.sumFactory(num1, num2)" value="Soma">
+<input type="submit" data-ng-click="$ctrl.subFactory(num1, num2)" value="Subtração">
+
+<input type="submit" data-ng-click="$ctrl.sumService(num1, num2)" value="Soma">
+<input type="submit" data-ng-click="$ctrl.subService(num1, num2)" value="Subtração">
 
 <!-- Exibindo os dados -->
 {{ $ctrl.person.name }}

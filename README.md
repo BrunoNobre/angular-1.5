@@ -4,6 +4,7 @@ Esse projeto é baseado no curso de AngularJS da School of Net no qual se aprend
 ##Tópicos abordados
 * Nosso ambiente
 * Controllers
+* Services
 
 ## Requisitos fundamentais para rodar o projeto:  
 * [Node.js](https://nodejs.org)
@@ -17,7 +18,9 @@ Esse projeto é baseado no curso de AngularJS da School of Net no qual se aprend
 Resumindo, o __Yeoman Fountain Generator__ é um sub-gerador do __Yeoman__.  
 
 ## Instalação e execução:
+Faça download do projeto, entre na pasta e digite o comando:
 ```npm run serve```
+As dependencias serão instaladas e o servidor se iniciará automaticamente.
 
 
 ### Créditos:
