@@ -19,3 +19,15 @@
 <!-- Exibindo os dados -->
 {{ $ctrl.person.name }}
 {{ $ctrl.person.lastname }}
+
+<!-- Exemplo com a diretiva ng-repeat -->
+<ul>
+	<li data-ng-repeat="item in $ctrl.list">
+		<p> {{ item.name}} </p>
+		<p data-ng-bind="item.lastname"></p>
+	</li> 
+</ul>
+
+<app-directive name="Paulo Cesar", lastname="Ferreira de Mello"></app-directive>
+<!-- ou -->
+<!-- <div app-directive></div> -->

@@ -14,6 +14,14 @@ angular
       	    lastname: 'Ferreira de Mello'
         }
 
+        vm.list = [
+            { name: 'Paulo Cesar', lastname: 'Ferreira de Mello' },
+            { name: 'Claudia', lastname: 'Rodrigues' },
+            { name: 'Lucas', lastname: 'Freitas' },
+            { name: 'Nerci', lastname: 'Abreu' },
+            { name: 'Jaqueline', lastname: 'Ferreira de Mello' }
+        ]
+
         vm.alertMe = function(){
         	alert("Eu sou o " + vm.person.name + " " + vm.person.lastname);
         } 
