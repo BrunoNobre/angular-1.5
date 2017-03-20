@@ -3,7 +3,7 @@ angular
 	.directive('appDirective', function() {
 		return {
 			// restrict:
-			template: '<h1>Minha Diretiva</h1>',
+			template: '<h1>Minha Diretiva</h1><p>{{ name }} {{ lastname }}</p>',
 			// require:
 			// bindToController:
 			scope: {
