@@ -1,8 +1,16 @@
-<h1>{{ $ctrl.hello }}</h1>
+<h1>{{ $ctrl.title }}</h1>
 <hr>
+<form ng-submit="$ctrl.add($ctrl.form)">
+	<input type="text" data-ng-model="$ctrl.form.name" placeholder="Digite o nome">
+	<input type="tel" data-ng-model="$ctrl.form.phone" placeholder="Digite o telefone">
+	<input type="text" data-ng-model="$ctrl.form.email" placeholder="Digite o e-mail">
+
+	<button type="submit">Adicionar novo contato</button>
+</form>
+
 <!-- DATA-NG-MODEL: DATA é usado para validar o código na W3C mas pode se usar somente NG-MODEL -->
 <!-- $CTRL: Equivalente ao SCOPE do controller -->
-<label>Nome</label>
+<!-- <label>Nome</label>
 <input type="text" data-ng-model="$ctrl.person.name"> 
 <label>Sobrenome</label>
 <input type="text" data-ng-model="$ctrl.person.lastname">
@@ -14,22 +22,22 @@
 <input type="submit" data-ng-click="$ctrl.subFactory(num1, num2)" value="Subtração">
 
 <input type="submit" data-ng-click="$ctrl.sumService(num1, num2)" value="Soma">
-<input type="submit" data-ng-click="$ctrl.subService(num1, num2)" value="Subtração">
+<input type="submit" data-ng-click="$ctrl.subService(num1, num2)" value="Subtração"> -->
 
 <!-- Exibindo os dados -->
-{{ $ctrl.person.name }}
-{{ $ctrl.person.lastname }}
+<!-- {{ $ctrl.person.name }}
+{{ $ctrl.person.lastname }} -->
 
 <!-- Exemplo com a diretiva ng-repeat -->
-<ul>
+<!-- <ul>
 	<li data-ng-repeat="item in $ctrl.list">
 		<p> {{ item.name}} </p>
 		<p data-ng-bind="item.lastname"></p>
 	</li> 
 </ul>
 
-<app-directive name="Paulo Cesar" lastname="Ferreira de Mello"></app-directive>
+<app-directive name="Paulo Cesar" lastname="Ferreira de Mello"></app-directive> -->
 <!-- ou -->
 <!-- <div app-directive></div> -->
 
-<hero heroname="Claudia"></hero>
+<!-- <hero heroname="Claudia"></hero> -->
