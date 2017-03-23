@@ -10,9 +10,15 @@ angular
     	let vm = this;
 
         vm.title = 'Novo contato';
+        vm.listTitle = "Lista de Contatos";
+        vm.list = [];
         vm.form = {};
 
         vm.add = add;
+
+        (function onInit() {
+            return vm.list = ContactFactory.getList();
+        })();
 
         // Adiciona um contato
         function add(contact) {
@@ -21,7 +27,7 @@ angular
                 return;
             }
             clearForm();
-            return ContactFactory.add(contact);
+            ContactFactory.add(contact);
         }
 
         // Limpa o formulário

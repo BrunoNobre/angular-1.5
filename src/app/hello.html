@@ -8,6 +8,25 @@
 	<button type="submit">Adicionar novo contato</button>
 </form>
 
+<h1>{{ $ctrl.listName }}</h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>Nome</th>
+			<th>Telefone</th>
+			<th>E-mail</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr data-ng-repeat="contact in $ctrl.list">
+			<td data-ng-bind="contact.name"></td>
+			<td data-ng-bind="contact.phone"></td>
+			<td data-ng-bind="contact.email"></td>
+		</tr>
+	</tbody>
+</table>
+
 <!-- DATA-NG-MODEL: DATA é usado para validar o código na W3C mas pode se usar somente NG-MODEL -->
 <!-- $CTRL: Equivalente ao SCOPE do controller -->
 <!-- <label>Nome</label>

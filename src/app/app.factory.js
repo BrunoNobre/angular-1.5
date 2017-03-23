@@ -7,10 +7,14 @@ angular
 		var factory = {};
 
 		factory.add = add;
+		factory.getList = getList;
 
 		function add(contact) {
 			ContactService.add(contact);
-			console.log(ContactService.getList());
+		}
+
+		function getList() {
+			return ContactService.getList();
 		}
 
 		return factory;
