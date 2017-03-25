@@ -7,6 +7,8 @@ angular
 		this.getList = getList;
 		this.setList = setList;
 		this.add = add;
+		this.update = update;
+		this.remove = remove;
 
 		function getList() {
 			return list;
@@ -18,6 +20,14 @@ angular
 
 		function add(contact) {
 			list.push(contact);
+		}
+
+		function update(contact, index) {
+			list[index] = contact;
+		}
+
+		function remove(index) {
+			list.splice(index, 1);
 		}
 
 		// ASSOCIANDO AS FUNÇÕES DA FACTORY NO SERVICE

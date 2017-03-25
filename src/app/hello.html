@@ -1,6 +1,6 @@
 <h1>{{ $ctrl.title }}</h1>
 <hr>
-<form ng-submit="$ctrl.add($ctrl.form)">
+<form ng-submit="$ctrl.add($ctrl.form, $ctrl.indexUpdate)">
 	<input type="text" data-ng-model="$ctrl.form.name" placeholder="Digite o nome">
 	<input type="tel" data-ng-model="$ctrl.form.phone" placeholder="Digite o telefone">
 	<input type="text" data-ng-model="$ctrl.form.email" placeholder="Digite o e-mail">
@@ -16,6 +16,7 @@
 			<th>Nome</th>
 			<th>Telefone</th>
 			<th>E-mail</th>
+			<th>Ações</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -23,6 +24,10 @@
 			<td data-ng-bind="contact.name"></td>
 			<td data-ng-bind="contact.phone"></td>
 			<td data-ng-bind="contact.email"></td>
+			<td>
+				<button type="button" data-ng-click="$ctrl.edit(contact, $index)">Editar</button>
+				<button type="button" data-ng-click="$ctrl.remove(contact, $index)">Excluir</button>
+			</td>
 		</tr>
 	</tbody>
 </table>

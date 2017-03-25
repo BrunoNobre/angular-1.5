@@ -7,10 +7,20 @@ angular
 		var factory = {};
 
 		factory.add = add;
+		factory.update = update;
+		factory.remove = remove;
 		factory.getList = getList;
 
 		function add(contact) {
 			ContactService.add(contact);
+		}
+
+		function update(contact, index) {
+			ContactService.update(contact, index);
+		}
+
+		function remove(index) {
+			ContactService.remove(index);
 		}
 
 		function getList() {

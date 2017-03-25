@@ -9,30 +9,69 @@ angular
     	// this: Equivale ao scope e é acessado na view através do $ctrl.
     	let vm = this;
 
+    	// Título do formulário
         vm.title = 'Novo contato';
+
+        // Título da lista de contatos
         vm.listTitle = "Lista de Contatos";
+
+        // Lista de contatos
         vm.list = [];
+
+        // Formulário de contato
         vm.form = {};
 
+        // Liberando as funções para o uso na view model
         vm.add = add;
+        vm.edit = edit;
+        vm.remove = remove;
 
+        // IIFE = Função executada imediatamente após sua criação
         (function onInit() {
             return vm.list = ContactFactory.getList();
         })();
 
-        // Adiciona um contato
-        function add(contact) {
+        // Adiciona ou altera um contato
+        function add(contact, index) {
             if(!contact) {
                 alert('Necessário um contato válido');
                 return;
             }
+            if(!vm.list[index]) {
+                ContactFactory.add(contact);
+                clearForm();
+                alert('Adicionado com sucesso!');
+                return;
+            }
+            ContactFactory.update(contact, index);
             clearForm();
-            ContactFactory.add(contact);
+            alert('Alterado com sucesso!');
+        }
+
+        // Seleciona o contato para edição no formulário
+        function edit(contact, index) {
+            if(!contact) alert('Necessário um contato válido');
+            vm.form = angular.copy(contact);
+            vm.indexUpdate = index;
+        }
+
+        // Altera o contato na lista
+        function update(contact, index) {
+            ContactFactory.edit(contact, index);
+        }
+
+        // Deleta o contato da lista
+        function remove(contact, index) {
+            if(confirm('Deseja excluir ' + contact.name + '?')) {
+                ContactFactory.remove(index);
+                alert('Excluído com sucesso!');
+            }
         }
 
         // Limpa o formulário
         function clearForm() {
             vm.form = {};
+            delete vm.indexUpdate;
         }
  
     //     vm.hello = 'Hello World School of Net!';
