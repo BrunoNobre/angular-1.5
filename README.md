@@ -23,7 +23,6 @@ Esse projeto é baseado no curso de AngularJS da School of Net no qual se aprend
 ## Instalação:
 Faça download do projeto, entre na pasta e instale as dependências com os comandos abaixo:  
 * ```npm install```  
-* ```bower update```
 
 ## Executando o projeto:
 Inicie o servidor com o comando  
