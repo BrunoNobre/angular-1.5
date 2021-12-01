@@ -1,16 +1,14 @@
-const conf = require('./gulp.conf');
+const conf = require("./gulp.conf");
 
 module.exports = function () {
   return {
+    port: 8080,
     server: {
-      baseDir: [
-        conf.paths.tmp,
-        conf.paths.src
-      ],
+      baseDir: [conf.paths.tmp, conf.paths.src],
       routes: {
-        '/bower_components': 'bower_components'
-      }
+        "/node_modules": "node_modules",
+      },
     },
-    open: false
+    open: false,
   };
 };

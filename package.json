@@ -70,5 +70,10 @@
     "extends": [
       "xo-space"
     ]
+  },
+  "dependencies": {
+    "simulador-sulamerica-component": "^1.7.5",
+    "angular": "^1.6.2",
+    "angular-ui-router": "1.0.0-beta.3"
   }
 }
